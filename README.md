@@ -25,7 +25,7 @@ Backup options
 --------------
 
 Backup filename contains driver name, database name and date.
-You can change date pattern (by default "Y-m-d-H-i-s")
+You can change date pattern (by default `Y-m-d-H-i-s`)
 using `--date-pattern` option.
 
 If you using multiply connections, specify it using `--connection` option
