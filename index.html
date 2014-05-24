@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Backup bundle by nkt</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Backup bundle</h1>
+        <p>Symfony bundle for backup your database data</p>
+        <p class="view"><a href="https://github.com/nkt/backup-bundle">View the Project on GitHub <small>nkt/backup-bundle</small></a></p>
+        <ul>
+          <li><a href="https://github.com/nkt/backup-bundle/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/nkt/backup-bundle/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/nkt/backup-bundle">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="image-bundle" class="anchor" href="#image-bundle"><span class="octicon octicon-link"></span></a>Image bundle</h1>
+
+<p><a href="https://packagist.org/packages/nkt/backup-bundle"><img src="https://poser.pugx.org/nkt/backup-bundle/v/stable.svg" alt="Latest Stable Version"></a> <a href="https://packagist.org/packages/nkt/backup-bundle"><img src="https://poser.pugx.org/nkt/backup-bundle/downloads.svg" alt="Total Downloads"></a> <a href="https://packagist.org/packages/nkt/backup-bundle"><img src="https://poser.pugx.org/nkt/backup-bundle/v/unstable.svg" alt="Latest Unstable Version"></a> <a href="https://packagist.org/packages/nkt/backup-bundle"><img src="https://poser.pugx.org/nkt/backup-bundle/license.svg" alt="License"></a></p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Add <code>"nkt/backup-bundle": "1.0.x-dev"</code> into composer.json.</p>
+
+<p>Add <code>Nkt\ImageBundle\NktImageBundle</code> into your kernel bundles.</p>
+
+<p>Now you can add new cron job, for backup your application:</p>
+
+<div class="highlight highlight-bash"><pre>0 */6 * * * /path/to/app/console doctrine:database:backup --gzip<span class="o">=</span>-9
+</pre></div>
+
+<p>You can also restore any backup using</p>
+
+<div class="highlight highlight-bash"><pre>/path/to/app/console doctrine:database:restore /path/to/app/backup/backupname.sql.gz
+</pre></div>
+
+<h2>
+<a name="backup-options" class="anchor" href="#backup-options"><span class="octicon octicon-link"></span></a>Backup options</h2>
+
+<p>Backup filename contains driver name, database name and date.
+You can change date pattern (by default "Y-m-d-H-i-s")
+using <code>--date-pattern</code> option.</p>
+
+<p>If you using multiply connections, specify it using <code>--connection</code> option
+or <code>-c</code> flag.</p>
+
+<p>By default all backups saves into <code>path/to/app/backups</code>, you can change it
+using <code>--destination</code> option or <code>-d</code> flag.</p>
+
+<p>As you can see in example, you can compress backups using <code>--gzip</code> option.
+This option required value, you have to specify compress quality.</p>
+
+<h2>
+<a name="restore-options" class="anchor" href="#restore-options"><span class="octicon octicon-link"></span></a>Restore options</h2>
+
+<p>Restore command required filename by first argument. It also support
+change connection with <code>--connection</code> option or <code>-c</code> flag.</p>
+
+<p>You don't have to specify gzipped file. Command checks does filename
+ends with <code>.gz</code> and decompress it.</p>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>MIT</p>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/nkt">nkt</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
