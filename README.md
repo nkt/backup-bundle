@@ -1,5 +1,5 @@
-Image bundle
-============
+Backup bundle
+=============
 [![Latest Stable Version](https://poser.pugx.org/nkt/backup-bundle/v/stable.svg)](https://packagist.org/packages/nkt/backup-bundle) [![Total Downloads](https://poser.pugx.org/nkt/backup-bundle/downloads.svg)](https://packagist.org/packages/nkt/backup-bundle) [![Latest Unstable Version](https://poser.pugx.org/nkt/backup-bundle/v/unstable.svg)](https://packagist.org/packages/nkt/backup-bundle) [![License](https://poser.pugx.org/nkt/backup-bundle/license.svg)](https://packagist.org/packages/nkt/backup-bundle)
 
 Usage
@@ -7,7 +7,7 @@ Usage
 
 Add `"nkt/backup-bundle": "1.0.x-dev"` into composer.json.
 
-Add `Nkt\ImageBundle\NktImageBundle` into your kernel bundles.
+Add `Nkt\BackupBundle\NktBackupBundle` into your kernel bundles.
 
 Now you can add new cron job, for backup your application:
 
