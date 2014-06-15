@@ -7,9 +7,7 @@
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -19,7 +17,10 @@
       <header>
         <h1>Backup bundle</h1>
         <p>Symfony bundle for backup your database data</p>
+
         <p class="view"><a href="https://github.com/nkt/backup-bundle">View the Project on GitHub <small>nkt/backup-bundle</small></a></p>
+
+
         <ul>
           <li><a href="https://github.com/nkt/backup-bundle/zipball/master">Download <strong>ZIP File</strong></a></li>
           <li><a href="https://github.com/nkt/backup-bundle/tarball/master">Download <strong>TAR Ball</strong></a></li>
@@ -28,7 +29,7 @@
       </header>
       <section>
         <h1>
-<a name="image-bundle" class="anchor" href="#image-bundle"><span class="octicon octicon-link"></span></a>Image bundle</h1>
+<a name="backup-bundle" class="anchor" href="#backup-bundle"><span class="octicon octicon-link"></span></a>Backup bundle</h1>
 
 <p><a href="https://packagist.org/packages/nkt/backup-bundle"><img src="https://poser.pugx.org/nkt/backup-bundle/v/stable.svg" alt="Latest Stable Version"></a> <a href="https://packagist.org/packages/nkt/backup-bundle"><img src="https://poser.pugx.org/nkt/backup-bundle/downloads.svg" alt="Total Downloads"></a> <a href="https://packagist.org/packages/nkt/backup-bundle"><img src="https://poser.pugx.org/nkt/backup-bundle/v/unstable.svg" alt="Latest Unstable Version"></a> <a href="https://packagist.org/packages/nkt/backup-bundle"><img src="https://poser.pugx.org/nkt/backup-bundle/license.svg" alt="License"></a></p>
 
@@ -37,11 +38,11 @@
 
 <p>Add <code>"nkt/backup-bundle": "1.0.x-dev"</code> into composer.json.</p>
 
-<p>Add <code>Nkt\ImageBundle\NktImageBundle</code> into your kernel bundles.</p>
+<p>Add <code>Nkt\BackupBundle\NktBackupBundle</code> into your kernel bundles.</p>
 
 <p>Now you can add new cron job, for backup your application:</p>
 
-<div class="highlight highlight-bash"><pre>0 */6 * * * /path/to/app/console doctrine:database:backup --gzip<span class="o">=</span>-9
+<div class="highlight highlight-bash"><pre><span class="m">0</span> */6 * * * /path/to/app/console doctrine:database:backup --gzip<span class="o">=</span>-9
 </pre></div>
 
 <p>You can also restore any backup using</p>
@@ -53,7 +54,7 @@
 <a name="backup-options" class="anchor" href="#backup-options"><span class="octicon octicon-link"></span></a>Backup options</h2>
 
 <p>Backup filename contains driver name, database name and date.
-You can change date pattern (by default "Y-m-d-H-i-s")
+You can change date pattern (by default <code>Y-m-d-H-i-s</code>)
 using <code>--date-pattern</code> option.</p>
 
 <p>If you using multiply connections, specify it using <code>--connection</code> option
@@ -79,12 +80,12 @@ ends with <code>.gz</code> and decompress it.</p>
 
 <p>MIT</p>
       </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/nkt">nkt</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
     </div>
-    <footer>
-      <p>Project maintained by <a href="https://github.com/nkt">nkt</a></p>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    <script src="javascripts/scale.fix.js"></script>
     
   </body>
 </html>
